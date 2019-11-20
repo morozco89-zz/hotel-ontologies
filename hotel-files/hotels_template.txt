@@ -1,0 +1,11 @@
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hotel_%d
+hotel:hotel_%d rdf:type owl:NamedIndividual ,
+                          hotel:Hotel ;
+                 hotel:isFromCountryHotel hotel:pais_%d ;
+                 hotel:hasBusinessName "%s"^^xsd:string ;
+                 hotel:hasHotelAcronym "%s"^^xsd:string ;
+                 hotel:hasHotelId "%s"^^xsd:string ;
+                 hotel:hasHotelIdType "%s"^^xsd:string ;
+                 hotel:hasMaxRoom "%d"^^xsd:nonNegativeInteger ;
+                 hotel:hasName "%s"^^xsd:string .
+

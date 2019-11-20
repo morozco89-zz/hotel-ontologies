@@ -1,0 +1,6 @@
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#ciudad_%d
+hotel:ciudad_%d rdf:type owl:NamedIndividual ,
+                                 hotel:City ;
+                        hotel:isFromCountry hotel:pais_%d ;
+                        hotel:hasName "%s"^^xsd:string .
+

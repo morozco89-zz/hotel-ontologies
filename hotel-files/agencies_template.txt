@@ -1,0 +1,6 @@
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#agency_%d
+hotel:agency_%d rdf:type owl:NamedIndividual ,
+                          hotel:Agency ;
+                 hotel:hasInitials "%s"^^xsd:string ;
+                 hotel:hasName "%s"^^xsd:string .
+

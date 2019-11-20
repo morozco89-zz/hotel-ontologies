@@ -1,0 +1,328 @@
+@prefix : <http://34.66.201.38/hotel-ontologies/hotel.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obda: <https://w3id.org/obda/vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hotel: <http://34.66.201.38/hotel-ontologies/hotel.owl#> .
+@base <http://34.66.201.38/hotel-ontologies/hotel.owl> .
+
+<http://34.66.201.38/hotel-ontologies/hotel.owl> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#belongsTo
+hotel:belongsTo rdf:type owl:ObjectProperty ;
+                rdfs:domain hotel:ReservationDetail ;
+                rdfs:range hotel:Reservation .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasDestinyCity
+hotel:hasDestinyCity rdf:type owl:ObjectProperty ;
+                     rdfs:domain hotel:Reservation ;
+                     rdfs:range hotel:City .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasHolder
+hotel:hasHolder rdf:type owl:ObjectProperty ;
+                rdfs:domain hotel:Reservation ;
+                rdfs:range hotel:Passenger .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasHotel
+hotel:hasHotel rdf:type owl:ObjectProperty ;
+               rdfs:domain hotel:ReservationDetail ;
+               rdfs:range hotel:Hotel .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasOriginCity
+hotel:hasOriginCity rdf:type owl:ObjectProperty ;
+                    rdfs:domain hotel:Reservation ;
+                    rdfs:range hotel:City .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasPassenger
+hotel:hasPassenger rdf:type owl:ObjectProperty ;
+                   rdfs:domain hotel:ReservationDetail ;
+                   rdfs:range hotel:Passenger .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#isFromCountry
+hotel:isFromCountry rdf:type owl:ObjectProperty ;
+                    rdfs:domain hotel:City ;
+                    rdfs:range hotel:Country .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#isFromCountryHotel
+hotel:isFromCountryHotel rdf:type owl:ObjectProperty ;
+                         rdfs:domain hotel:Hotel ;
+                         rdfs:range hotel:Country .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#soldBy
+hotel:soldBy rdf:type owl:ObjectProperty ;
+             rdfs:domain hotel:Reservation ;
+             rdfs:range hotel:Agency .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasAccommodation
+hotel:hasAccommodation rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hotel:ReservationDetail ;
+                       rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasAdultsNumber
+hotel:hasAdultsNumber rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hotel:ReservationDetail ;
+                      rdfs:range xsd:nonNegativeInteger .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasBirthDate
+hotel:hasBirthDate rdf:type owl:DatatypeProperty ;
+                   rdfs:domain hotel:Passenger ;
+                   rdfs:range xsd:dateTime .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasBusinessName
+hotel:hasBusinessName rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hotel:Hotel ;
+                      rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasChildren25Number
+hotel:hasChildren25Number rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hotel:ReservationDetail ;
+                          rdfs:range xsd:nonNegativeInteger .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasChildrenNumber
+hotel:hasChildrenNumber rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hotel:ReservationDetail ;
+                        rdfs:range xsd:nonNegativeInteger .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasDocumentType
+hotel:hasDocumentType rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hotel:Passenger ;
+                      rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasEndDate
+hotel:hasEndDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hotel:ReservationDetail ;
+                 rdfs:range xsd:dateTime .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasGender
+hotel:hasGender rdf:type owl:DatatypeProperty ;
+                rdfs:domain hotel:Passenger ;
+                rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasHotelAcronym
+hotel:hasHotelAcronym rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hotel:Hotel ;
+                      rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasHotelId
+hotel:hasHotelId rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hotel:Hotel ;
+                 rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasHotelIdType
+hotel:hasHotelIdType rdf:type owl:DatatypeProperty ;
+                     rdfs:domain hotel:Hotel ;
+                     rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasId
+hotel:hasId rdf:type owl:DatatypeProperty ;
+            rdfs:domain hotel:Passenger ;
+            rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasInfantNumber
+hotel:hasInfantNumber rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hotel:ReservationDetail ;
+                      rdfs:range xsd:nonNegativeInteger .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasInitials
+hotel:hasInitials rdf:type owl:DatatypeProperty ;
+                  rdfs:domain hotel:Agency ;
+                  rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasLastName
+hotel:hasLastName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain hotel:Passenger ;
+                  rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasMaxRoom
+hotel:hasMaxRoom rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hotel:Hotel ;
+                 rdfs:range xsd:nonNegativeInteger .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasName
+hotel:hasName rdf:type owl:DatatypeProperty ;
+              rdfs:domain hotel:Agency ,
+                          hotel:City ,
+                          hotel:Country ,
+                          hotel:Hotel ,
+                          hotel:Passenger ;
+              rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasPlan
+hotel:hasPlan rdf:type owl:DatatypeProperty ;
+              rdfs:domain hotel:ReservationDetail ;
+              rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasReservationMode
+hotel:hasReservationMode rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hotel:Reservation ;
+                         rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasReservationType
+hotel:hasReservationType rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hotel:Reservation ;
+                         rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasRoomType
+hotel:hasRoomType rdf:type owl:DatatypeProperty ;
+                  rdfs:domain hotel:ReservationDetail ;
+                  rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasStartDate
+hotel:hasStartDate rdf:type owl:DatatypeProperty ;
+                   rdfs:domain hotel:ReservationDetail ;
+                   rdfs:range xsd:dateTime .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasStatus
+hotel:hasStatus rdf:type owl:DatatypeProperty ;
+                rdfs:domain hotel:Reservation ;
+                rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#hasUuid
+hotel:hasUuid rdf:type owl:DatatypeProperty ;
+              rdfs:domain hotel:Reservation ;
+              rdfs:range xsd:nonNegativeInteger .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#isPassengerType
+hotel:isPassengerType rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hotel:Passenger ;
+                      rdfs:range xsd:string .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#roomNumber
+hotel:roomNumber rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hotel:ReservationDetail ;
+                 rdfs:range xsd:nonNegativeInteger .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#Agency
+hotel:Agency rdf:type owl:Class .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#City
+hotel:City rdf:type owl:Class .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#Country
+hotel:Country rdf:type owl:Class .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#Hotel
+hotel:Hotel rdf:type owl:Class .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#Passenger
+hotel:Passenger rdf:type owl:Class .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#Reservation
+hotel:Reservation rdf:type owl:Class .
+
+
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#ReservationDetail
+hotel:ReservationDetail rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+%s
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( hotel:Agency
+                hotel:City
+                hotel:Country
+                hotel:Hotel
+                hotel:Passenger
+                hotel:Reservation
+                hotel:ReservationDetail
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( hotel:hasAccommodation
+                hotel:hasAdultsNumber
+                hotel:hasBirthDate
+                hotel:hasBusinessName
+                hotel:hasChildren25Number
+                hotel:hasChildrenNumber
+                hotel:hasDocumentType
+                hotel:hasEndDate
+                hotel:hasGender
+                hotel:hasHotelAcronym
+                hotel:hasHotelId
+                hotel:hasHotelIdType
+                hotel:hasId
+                hotel:hasInfantNumber
+                hotel:hasInitials
+                hotel:hasLastName
+                hotel:hasMaxRoom
+                hotel:hasName
+                hotel:hasPlan
+                hotel:hasReservationMode
+                hotel:hasReservationType
+                hotel:hasRoomType
+                hotel:hasStartDate
+                hotel:hasStatus
+                hotel:hasUuid
+                hotel:isPassengerType
+                hotel:roomNumber
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

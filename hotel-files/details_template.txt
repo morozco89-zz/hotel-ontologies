@@ -1,0 +1,17 @@
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#reservation_detail_%d
+hotel:reservation_detail_%d rdf:type owl:NamedIndividual ,
+                                           hotel:ReservationDetail ;
+                                  hotel:belongsTo hotel:reservation_%d ;
+                                  hotel:hasHotel hotel:hotel_%d ;
+                                  hotel:hasPassenger %s ;
+                                  hotel:hasAccommodation "%s"^^xsd:string ;
+                                  hotel:hasAdultsNumber "%d"^^xsd:nonNegativeInteger ;
+                                  hotel:hasChildren25Number "%d"^^xsd:nonNegativeInteger ;
+                                  hotel:hasChildrenNumber "%d"^^xsd:nonNegativeInteger ;
+                                  hotel:hasEndDate "%sT00:00:00"^^xsd:dateTime ;
+                                  hotel:hasInfantNumber "%d"^^xsd:nonNegativeInteger ;
+                                  hotel:hasPlan "%s"^^xsd:string ;
+                                  hotel:hasRoomType "%s"^^xsd:string ;
+                                  hotel:hasStartDate "%sT00:00:00"^^xsd:dateTime ;
+                                  hotel:roomNumber "%d"^^xsd:nonNegativeInteger .
+

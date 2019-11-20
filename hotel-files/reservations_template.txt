@@ -1,0 +1,12 @@
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#reservation_%d
+hotel:reservation_%d rdf:type owl:NamedIndividual ,
+                                    hotel:Reservation ;
+                           hotel:hasDestinyCity hotel:ciudad_%d ;
+                           hotel:hasHolder hotel:passenger_%d ;
+                           hotel:hasOriginCity hotel:ciudad_%d ;
+                           hotel:soldBy hotel:agency_%d ;
+                           hotel:hasReservationMode "%s"^^xsd:string ;
+                           hotel:hasReservationType "%s"^^xsd:string ;
+                           hotel:hasStatus "%s"^^xsd:string ;
+                           hotel:hasUuid "%d"^^xsd:nonNegativeInteger .
+

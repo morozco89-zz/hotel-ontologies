@@ -1,0 +1,11 @@
+###  http://34.66.201.38/hotel-ontologies/hotel.owl#passenger_%d
+hotel:passenger_%d rdf:type owl:NamedIndividual ,
+                                hotel:Passenger ;
+                       hotel:hasBirthDate "%sT00:00:00"^^xsd:dateTime ;
+                       hotel:hasGender "%s"^^xsd:string ;
+                       hotel:hasDocumentType "%s"^^xsd:string ;
+                       hotel:hasId "%s"^^xsd:string ;
+                       hotel:hasLastName "%s"^^xsd:string ;
+                       hotel:hasName "%s"^^xsd:string ;
+                       hotel:isPassengerType "%s"^^xsd:string .
+
